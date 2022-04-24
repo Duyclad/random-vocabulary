@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body onload="loadVocabulary()" style="text-align: center;font-size: 72px;padding: 20px;">
+        <p id="eng"></p>
+        <p id="vie"></p>
+        <button onclick="changeDisplay()" style="font-size: 22px;">Dịch nghĩa</button>
+        <button onclick="loadVocabulary()" style="font-size: 22px;">Tiếp tục</button>
+
+        <script type="text/javascript">
+            // const list_eng = `{
+            //     "e1":{
+            //         "eng":"test",
+            //         "vie":"kiểm tra"
+            //     },
+            //     "e2":{
+            //         "eng":"table",
+            //         "vie":"cái bàn"
+            //     },
+            //     "e3":{
+            //         "eng":"okay",
+            //         "vie":"được"
+            //     }
+            // }`;
+            const list_eng = [
+                ["test","kiểm tra"],
+                ["table","cái bàn"],
+                ["okay","được"]
+            ];
+
+            //var obj =  JSON.parse(list_eng);
+            //debugger;
+            // var rd = Math.floor(Math.random() * 3) + 1 ;
+            // var erd = 'e'+rd;
+            // console.log('test' + rd);
+            // function loadVocabulary (){
+            //     console.log(erd);
+            //     console.log(obj.e);
+            //     //var obj2 = JSON.parse(obj.rd);
+            //     //document.getElementById("eng").innerHTML =obj.rd.eng;
+            // }
+            var rd = 0;
+
+            function loadVocabulary (){
+                changeDisplayNone();
+                rd = Math.floor(Math.random() * 3);
+                document.getElementById("eng").innerHTML = list_eng[rd][0];
+                
+            }
+
+            function changeDisplay(){
+                // document.getElementById("vie").style.display = "block";
+                document.getElementById("vie").innerHTML = list_eng[rd][1];
+            }
+
+            function changeDisplayNone(){
+                //document.getElementById("vie").style.display = "none";
+                document.getElementById("vie").innerHTML = "_";
+            }
+           
+        </script>
+    </body>
+</html>
