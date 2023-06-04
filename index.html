@@ -1,12 +1,33 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TGGRFJG');</script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8">
+        <meta name="title" content="Trang web random từ vựng - học từ vựng random ngẫu nhiên" />
+        <meta name="description" content="Học từ vựng random ngẫu nhiên, trang web giúp các bạn học tiếng anh không theo thứ tự từ vựng. Đây là website phi lợi nhuận." />
+        <meta name="robots" content="all" />
+        <meta name="revisit-after" content="7 days" />
+        <meta http-equiv="content-language" content="vi" />
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body onload="loadVocabulary()" style="text-align: center;font-size: 72px;padding: 20px;">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGGRFJG"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <p id="eng"></p>
         <p id="vie"></p>
         <button onclick="changeDisplay()" style="font-size: 22px; height: 5rem; width: 10rem;">Dịch nghĩa</button>
         <button onclick="loadVocabulary()" style="font-size: 22px; height: 5rem; width: 10rem;">Tiếp tục</button>
+        <br>
+        <p style="font-size: small; position: fixed; bottom: 5px; right: 5px;">Bản cập nhật: 2306041823 | <span id="sum_vocabulary"></span></p>
 
         <script type="text/javascript">
             const list_eng = [
@@ -220,6 +241,10 @@
                 //document.getElementById("vie").style.display = "none";
                 document.getElementById("vie").innerHTML = "_";
             }
+
+            $(document).ready(function() {
+                $('#sum_vocabulary').html('Tổng số: ' + list_eng.length)
+            })
            
         </script>
     </body>
