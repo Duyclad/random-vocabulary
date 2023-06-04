@@ -1,261 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TGGRFJG');</script>
-        <!-- End Google Tag Manager -->
 
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-884FKHEHVQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TGGRFJG');</script>
+    <!-- End Google Tag Manager -->
 
-  gtag('config', 'G-884FKHEHVQ');
-</script>
-        <meta charset="UTF-8">
-        <meta name="title" content="Trang web random từ vựng - học từ vựng random ngẫu nhiên" />
-        <meta name="description" content="Học từ vựng random ngẫu nhiên, trang web giúp các bạn học tiếng anh không theo thứ tự từ vựng. Đây là website phi lợi nhuận." />
-        <meta name="robots" content="all" />
-        <meta name="revisit-after" content="7 days" />
-        <meta http-equiv="content-language" content="vi" />
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    </head>
-    <body onload="loadVocabulary()" style="text-align: center;font-size: 72px;padding: 20px;">
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGGRFJG"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <p id="eng"></p>
-        <p id="vie"></p>
-        <button onclick="changeDisplay()" style="font-size: 22px; height: 5rem; width: 10rem;">Dịch nghĩa</button>
-        <button onclick="loadVocabulary()" style="font-size: 22px; height: 5rem; width: 10rem;">Tiếp tục</button>
-        <br>
-        <p style="font-size: small; position: fixed; bottom: 5px; right: 5px;">Bản cập nhật: 2306041823 | <span id="sum_vocabulary"></span></p>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-884FKHEHVQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-        <script type="text/javascript">
-            const list_eng = [
-                //HACK NÃO
-                // unit 1
-                ["usual","thông thường"],
-                ["dust","quét bụi"],
-                ["weekday","ngày trong tuần"],
-                ["pull","kéo"],
-                ["fold","gấp (quần áo)"],
-                ["reach","với tới"],
-                ["iron","là, ủi"],
-                ["upstairs","tầng trên"],
-                ["sweep","quét"],
-                ["elevator","thang máy"],
-                ["turn on","bật lên"],
-                ["receipt","hóa đơn"],
-                ["count","đếm"],
-                ["press","nhấn"],
-                ["hang","treo, phơi"],
-                ["shut","đóng"],
-                ["laundry","quần áo cần giặt"],
-                ["refill","làm đầy lại"],
-                ["put on","mặc vào"],
-                ["role","vai trò"],
-                ["tend","có xu hướng, thường"],
-                ["shower","việc tắm rửa"],
-                ["arrive","tới nơi"],
-                ["typical","điển hình"],
-                ["get up","thức dậy"],
-                ["flow","chảy, luồng"],
-                ["noon","buổi trưa"],
-                ["routine","nếp sinh hoạt"],
-                ["shit","ca làm"],
-                ["come back","quay lại"],
-                // Unit 2
-                ["bother","làm phiền"],
-                ["sit around","ngồi không"],
-                ["sun set","hoàng hôn"],
-                ["garbage","rác"],
-                ["midnight","nửa đêm"],
-                ["tough","khó khăn"],
-                ["sleepy","buồn ngủ"],
-                ["slightly","hơi hơi"],
-                ["awake","tỉnh, tỉnh táo"],
-                ["slip","trượt chân"],
-                ["alone","một mình"],
-                ["push","đẩy"],
-                ["knock","gõ"],
-                ["break","làm vỡ"],
-                ["neighbor","hàng xóm"],
-                ["fill up","lấp đầy"],
-                ["stretch","kéo dãn"],
-                ["run out","hết sạch"],
-                ["rest","lúc nghỉ ngơi"],
-                ["spill","làm đổ"],
-                ["flush","xả nước"],
-                ["stay up","thức muộn"],
-                ["breath","hơi thở"],
-                ["sunrise","bình minh"],
-                ["phase","giai đoạn"],
-                ["leisure","lúc rảnh rỗi"],
-                ["series","phim dài tập"],
-                ["snooze","giấc ngủ ngắn"],
-                ["spare","thừa"],
-                ["sleep in","ngủ nướng"],
-                // Unit 3
-                ["decline","từ chối"],
-                ["quit","từ bỏ"],
-                ["hang out","đi chơi"],
-                ["exercise","thể dục"],
-                ["calendar","lịch"],
-                ["amazing","tuyệt vời"],
-                ["workplace","cơ quan"],
-                ["patient","tuyệt vời"],
-                ["almost","hầu như"],
-                ["grateful","thấy biết ơn"],
-                ["jogging","đi bộ thể dục"],
-                ["tip","mẹo"],
-                ["necessary","cần thiết"],
-                ["focus","tập trung"],
-                ["estimate","ước lượng"],
-                ["practice","tập luyện"],
-                ["minute","phút"],
-                ["efficient","có hiệu suất cao"],
-                ["burnout","tình trạng kiệt sức"],
-                ["agenda","danh sách công việc"],
-                ["assist","hỗ trợ"],
-                ["productive","có năng suất"],
-                ["workload","khối lượng công việc"],
-                ["news","tin tức"],
-                ["arrange","sắp xếp"],
-                ["follow up","theo sát"],
-                ["discipline","kỷ luật"],
-                ["plan ahead","lên kế hoạch trước"],
-                ["outcome","kết quả"],
-                ["period","khoảng thời gian"],
-                // Unit 4
-                ["form","đơn"],
-                ["male","đàn ông"],
-                ["fill out","điền vào"],
-                ["female","phụ nữ"],
-                ["personal","cá nhân"],
-                ["birth","lúc chào đời"],
-                ["information","thông tin"],
-                ["middle","ở giữa"],
-                ["gender","giới tính"],
-                ["correct","sửa lại"],
-                ["nationality","quốc tịch"],
-                ["southern","phía Nam, phương Nam"],
-                ["hometown","quê quán, quê nhà"],
-                ["recently","gần đây"],
-                ["grow up","lớn lên"],
-                ["district","quận, huyện"],
-                ["northern","phía Bắc, phương Bắc"],
-                ["sign","ký tên"],
-                ["province","tỉnh, thành"],
-                ["type","gõ"],
-                ["additional","thêm"],
-                ["identity","danh tính"],
-                ["previous","trước đó"],
-                ["interview","phỏng vấn"],
-                ["live with","sống cùng với"],
-                ["photograph","ảnh"],
-                ["favorite","yêu thích"],
-                ["permanent","lâu dài"],
-                ["introduction","giới thiệu"],
-                ["code","mã"],
-                // Unit 5
-                ["career","sự nghiệp"],
-                ["several","một vài"],
-                ["suitable","phù hợp"],
-                ["engineer","kỹ sư"],
-                ["experience","kinh nghiệm"],
-                ["background","bối cảnh, nền tảng"],
-                ["struggle","gắng sức"],
-                ["decide","quyết định"],
-                ["passion","đam mê"],
-                ["inspiration","cảm hứng"],
-                ["develop","phát triển"],
-                ["detail","chi tiết"],
-                ["abroad","ở nước ngoài"],
-                ["specific","cụ thể"],
-                ["fit in","hòa nhập"],
-                ["future","tương lai"],
-                ["freelance","lao động tự do"],
-                ["specialist","chuyên viên"],
-                ["occupation","nghề nghiệp"],
-                ["achievement","thành tựu"],
-                ["acquire","có được"],
-                ["grade","điểm"],
-                ["degree","bằng cấp"],
-                ["primary","(thuộc cấp) tiểu học"],
-                ["suppose","cho rằng"],
-                ["motivation","động lực"],
-                ["attend","tham dự"],
-                ["university","đại học"],
-                ["major","theo chuyên ngành"],
-                ["dream","mơ ước"],
-                // Unit 6
-                ["goal","mục tiêu"],
-                ["ability","khả năng"],
-                ["company","công ty"],
-                ["offer","đưa đề nghị"],
-                ["prepare","chuẩn bị"],
-                ["condition","điều kiện"],
-                ["hire","tuyển dụng"],
-                ["salary","lương"],
-                ["position","vị trí"],
-                ["bonus","khoản thưởng"],
-                ["insurance","bảo hiểm"],
-                ["assess","đánh giá"],
-                ["relevant","liên quan"],
-                ["weakness","điểm yếu"],
-                ["stand out","nổi bật"],
-                ["training","đào tạo"],
-                ["duty","nhiệm vụ"],
-                ["evaluate","đánh giá"],
-                ["process","xử lý"],
-                ["look forward to","mong chờ"],
-                ["rule","luật lệ"],
-                ["department","phòng ban"],
-                ["mission","sứ mệnh"],
-                ["temporary","tạm thời"],
-                ["failure","thất bại"],
-                ["appointment","cuộc hẹn"],
-                ["lesson","bài học"],
-                ["official","chính thức"],
-                ["qualify","đủ tiêu chuẩn"],
-                ["potential","tièm năng"],
-                // Unit 7
-                ["minute","phút"],
+        gtag('config', 'G-884FKHEHVQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="title" content="Trang web random từ vựng - học từ vựng random ngẫu nhiên" />
+    <meta name="description"
+        content="Học từ vựng random ngẫu nhiên, trang web giúp các bạn học tiếng anh không theo thứ tự từ vựng. Đây là website phi lợi nhuận." />
+    <meta name="robots" content="all" />
+    <meta name="revisit-after" content="7 days" />
+    <meta http-equiv="content-language" content="vi" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</head>
 
-            ];
+<body style="text-align: center;font-size: 72px;padding: 20px;">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TGGRFJG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <p id="eng"></p>
+    <p id="vie"></p>
+    <button onclick="changeDisplay()" style="font-size: 22px; height: 5rem; width: 10rem;">Dịch nghĩa</button>
+    <button onclick="loadVocabulary()" style="font-size: 22px; height: 5rem; width: 10rem;">Tiếp tục</button>
+    <br>
+    <p style="font-size: small; position: fixed; bottom: 5px; right: 5px;">Bản cập nhật: 2306041941 | <span
+            id="sum_vocabulary"></span></p>
 
-            var rd = 0;
 
-            function loadVocabulary (){
-                changeDisplayNone();
-                rd = Math.floor(Math.random() * list_eng.length);
-                document.getElementById("eng").innerHTML = list_eng[rd][0];
-                
-            }
+</body>
 
-            function changeDisplay(){
-                // document.getElementById("vie").style.display = "block";
-                document.getElementById("vie").innerHTML = list_eng[rd][1].toUpperCase();
-            }
-
-            function changeDisplayNone(){
-                //document.getElementById("vie").style.display = "none";
-                document.getElementById("vie").innerHTML = "_";
-            }
-
-            $(document).ready(function() {
-                $('#sum_vocabulary').html('Tổng số: ' + list_eng.length)
-            })
-           
-        </script>
-    </body>
 </html>
