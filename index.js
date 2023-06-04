@@ -209,6 +209,6 @@ function changeDisplayNone() {
 }
 
 $(document).ready(function () {
-  $("#sum_vocabulary").html("Tổng số: " + list_eng.length);
+  $("#sum_vocabulary").html("Số lượng từ: " + list_eng.length);
   loadVocabulary();
 });
