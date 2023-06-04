@@ -5,46 +5,93 @@
     <body onload="loadVocabulary()" style="text-align: center;font-size: 72px;padding: 20px;">
         <p id="eng"></p>
         <p id="vie"></p>
-        <button onclick="changeDisplay()" style="font-size: 22px;">Dịch nghĩa</button>
-        <button onclick="loadVocabulary()" style="font-size: 22px;">Tiếp tục</button>
+        <button onclick="changeDisplay()" style="font-size: 22px; height: 5rem; width: 10rem;">Dịch nghĩa</button>
+        <button onclick="loadVocabulary()" style="font-size: 22px; height: 5rem; width: 10rem;">Tiếp tục</button>
 
         <script type="text/javascript">
-            // const list_eng = `{
-            //     "e1":{
-            //         "eng":"test",
-            //         "vie":"kiểm tra"
-            //     },
-            //     "e2":{
-            //         "eng":"table",
-            //         "vie":"cái bàn"
-            //     },
-            //     "e3":{
-            //         "eng":"okay",
-            //         "vie":"được"
-            //     }
-            // }`;
             const list_eng = [
-                ["test","kiểm tra"],
-                ["table","cái bàn"],
-                ["okay","được"]
+                //HACK NÃO
+                // unit 1
+                ["usual","thông thường"],
+                ["dust","quét bụi"],
+                ["weekday","ngày trong tuần"],
+                ["pull","kéo"],
+                ["fold","gấp (quần áo)"],
+                ["reach","với tới"],
+                ["iron","là, ủi"],
+                ["upstairs","tầng trên"],
+                ["sweep","quét"],
+                ["elevator","thang máy"],
+                ["turn on","bật lên"],
+                ["receipt","hóa đơn"],
+                ["count","đếm"],
+                ["press","nhấn"],
+                ["hang","treo, phơi"],
+                ["shut","đóng"],
+                ["laundry","quần áo cần giặt"],
+                ["refill","làm đầy lại"],
+                ["put on","mặc vào"],
+                ["role","vai trò"],
+                ["tend","có xu hướng, thường"],
+                ["shower","việc tắm rửa"],
+                ["arrive","tới nơi"],
+                ["typical","điển hình"],
+                ["get up","thức dậy"],
+                ["flow","chảy, luồng"],
+                ["noon","buổi trưa"],
+                ["routine","nếp sinh hoạt"],
+                ["shit","ca làm"],
+                ["come back","quay lại"],
+                // Unit 2
+                ["bother","làm phiền"],
+                ["sit around","ngồi không"],
+                ["sun set","hoàng hôn"],
+                ["garbage","rác"],
+                ["midnight","nửa đêm"],
+                ["tough","khó khăn"],
+                ["sleepy","buồn ngủ"],
+                ["slightly","hơi hơi"],
+                ["awake","tỉnh, tỉnh táo"],
+                ["slip","trượt chân"],
+                ["alone","một mình"],
+                ["push","đẩy"],
+                ["knock","gõ"],
+                ["break","làm vỡ"],
+                ["neighbor","hàng xóm"],
+                ["fill up","lấp đầy"],
+                ["stretch","kéo dãn"],
+                ["run out","hết sạch"],
+                ["rest","lúc nghỉ ngơi"],
+                ["spill","làm đổ"],
+                ["flush","xả nước"],
+                ["stay up","thức muộn"],
+                ["breath","hơi thở"],
+                ["sunrise","bình minh"],
+                ["phase","giai đoạn"],
+                ["leisure","lúc rảnh rỗi"],
+                ["series","phim dài tập"],
+                ["snooze","giấc ngủ ngắn"],
+                ["spare","thừa"],
+                ["sleep in","ngủ nướng"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+                // ["spill","làm đổ"],
+
+                
             ];
 
-            //var obj =  JSON.parse(list_eng);
-            //debugger;
-            // var rd = Math.floor(Math.random() * 3) + 1 ;
-            // var erd = 'e'+rd;
-            // console.log('test' + rd);
-            // function loadVocabulary (){
-            //     console.log(erd);
-            //     console.log(obj.e);
-            //     //var obj2 = JSON.parse(obj.rd);
-            //     //document.getElementById("eng").innerHTML =obj.rd.eng;
-            // }
             var rd = 0;
 
             function loadVocabulary (){
                 changeDisplayNone();
-                rd = Math.floor(Math.random() * 3);
+                rd = Math.floor(Math.random() * list_eng.length);
                 document.getElementById("eng").innerHTML = list_eng[rd][0];
                 
             }
