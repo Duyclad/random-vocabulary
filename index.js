@@ -1,5 +1,5 @@
 const list_eng = [
-  //HACK NÃO
+  //HACK B
   // unit 1
   ["usual", "thông thường"],
   ["dust", "quét bụi"],
@@ -192,15 +192,23 @@ const list_eng = [
 
 var rd = 0;
 
+var begin = list_eng
+
 function loadVocabulary() {
   changeDisplayNone();
-  rd = Math.floor(Math.random() * list_eng.length);
-  document.getElementById("eng").innerHTML = list_eng[rd][0];
+  if($('#vie').html() == "_") {
+    begin.slice(rd,1)
+  }
+  if(begin.length == 0) {
+    begin = list_eng
+  }
+  rd = Math.floor(Math.random() * begin.length);
+  document.getElementById("eng").innerHTML = begin[rd][0];
 }
 
 function changeDisplay() {
   // document.getElementById("vie").style.display = "block";
-  document.getElementById("vie").innerHTML = list_eng[rd][1].toUpperCase();
+  document.getElementById("vie").innerHTML = begin[rd][1].toUpperCase();
 }
 
 function changeDisplayNone() {
