@@ -1,3 +1,15 @@
+// const list_eng = [
+//   //HACK B
+//   // unit 1
+//   ["usual", "thông thường"],
+//   ["dust", "quét bụi"],
+//   ["weekday", "ngày trong tuần"],
+//   ["pull", "kéo"],
+//   ["fold", "gấp (quần áo)"],
+//   ["reach", "với tới"],
+//   ["iron", "là, ủi"],
+// ]
+
 const list_eng = [
   //HACK B
   // unit 1
@@ -185,22 +197,85 @@ const list_eng = [
   ["lesson", "bài học"],
   ["official", "chính thức"],
   ["qualify", "đủ tiêu chuẩn"],
-  ["potential", "tièm năng"],
+  ["potential", "tiềm năng"],
   // Unit 7
+  ["secretary", "thư ký"],
+  ["due", "đến hạn"],
+  ["folder", "thư mục, tập tài liệu"],
+  ["internship", "kỳ thực tập"],
+  ["print", "in"],
+  ["put off", "hoãn lại"],
+  ["colleague", "đồng nghiệp"],
+  ["equipment", "thiết bị, dụng cụ"],
+  ["report", "báo cáo"],
+  ["solution giải pháp", "phút"],
+  ["function", "chức năng"],
+  ["presentation", "bài thuyết trình"],
+  ["hand over", "bàn giao"],
+  ["approve", "chấp nhận"],
+  ["deadline", "hạn chót"],
+  ["conference", "hội thảo"],
+  ["meeting", "cuộc họp"],
+  ["client", "khách hàng"],
+  ["member", "thành viên"],
+  ["fault", "lỗi"],
+  ["call off", "hủy"],
+  ["assistant", "trợ lý"],
+  ["stamp", "con dấu, con tem"],
+  ["retire", "nghỉ hưu"],
+  ["feedback", "ý kiến phản hồi"],
+  ["expert", "mang tính chuyên gia"],
+  ["strategy", "chiến lược"],
+  ["handle", "xử lý"],
+  ["carry out", "thực hiện"],
+  ["involve", "bao gồm"],
+  // Unit 8
+  ["notebook", "vở, sổ"],
+  ["possible", "có thể"],
+  ["blank", "trống"],
+  ["expect", "kỳ vọng"],
+  ["include", "bao gồm"],
+  ["fall behind", "tụt lại phía sau"],
+  ["semester", "kỳ học"],
+  ["turn to", "tìm tới"],
+  ["curious", "tò mò"],
+  ["improve", "cải thiện"],
+  ["lecture", "bài giảng"],
+  ["physics", "vật lý"],
+  ["textbook", "sách giáo khoa"],
+  ["subject", "môn học"],
+  ["chemistry", "hóa học"],
+  ["literature", "văn học"],
+  ["hostory", "lịch sử"],
+  ["topic", "chủ đề"],
+  ["math", "toán học"],
+  ["final", "cuối cùng"],
+  ["exam", "bài thi"],
+  ["project", "dự án"],
+  ["instruction", "hướng dẫn"],
+  ["certificate", "giấy chứng nhận"],
+  ["complete", "hoàn thành"],
+  ["assignment", "bài tập"],
+  ["hand in", "nộp"],
+  ["example", "ví dụ"],
+  ["result", "kết quả"],
+  ["summary", "tóm tắt"],
+  // Unit 9
   ["minute", "phút"],
+
 ];
 
-var rd = 0;
+var rd = -1;
 
-var begin = list_eng
+var begin = [...list_eng]
 
 function loadVocabulary() {
-  changeDisplayNone();
-  if($('#vie').html() == "_") {
-    begin.slice(rd,1)
+  if($('#vie').html() == "_" && rd != -1) {
+    begin.splice(rd,1)
   }
+  changeDisplayNone();
   if(begin.length == 0) {
-    begin = list_eng
+    begin = [...list_eng]
   }
   rd = Math.floor(Math.random() * begin.length);
   document.getElementById("eng").innerHTML = begin[rd][0];
@@ -217,6 +292,6 @@ function changeDisplayNone() {
 }
 
 $(document).ready(function () {
-  $("#sum_vocabulary").html("Số lượng từ: " + list_eng.length);
+  $("#sum_vocabulary").html(`Hoàn thành: ${begin.length} / ${list_eng.length}`);
   loadVocabulary();
 });
