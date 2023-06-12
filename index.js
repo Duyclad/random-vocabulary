@@ -41,7 +41,7 @@ const list_eng = [
   ["flow", "chảy, luồng"],
   ["noon", "buổi trưa"],
   ["routine", "nếp sinh hoạt"],
-  ["shit", "ca làm"],
+  ["shift", "ca làm"],
   ["come back", "quay lại"],
   // Unit 2
   ["bother", "làm phiền"],
@@ -208,7 +208,7 @@ const list_eng = [
   ["colleague", "đồng nghiệp"],
   ["equipment", "thiết bị, dụng cụ"],
   ["report", "báo cáo"],
-  ["solution giải pháp", "phút"],
+  ["solution", "giải pháp"],
   ["function", "chức năng"],
   ["presentation", "bài thuyết trình"],
   ["hand over", "bàn giao"],
