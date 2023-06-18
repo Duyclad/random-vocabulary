@@ -261,6 +261,68 @@ const list_eng = [
   ["result", "kết quả"],
   ["summary", "tóm tắt"],
   // Unit 9
+  ["education", "việc giáo dục"],
+  ["faculty", "khoa trong trường"],
+  ["prize", "giải thưởng"],
+  ["professor", "giáo sư"],
+  ["freshman", "sinh viên năm nhất"],
+  ["principal", "hiệu trưởng"],
+  ["course", "khóa học"],
+  ["drop out", "bỏ học"],
+  ["curriculum", "chương trình học"],
+  ["get into", "vào"],
+  ["laboratory", "phòng thí nghiệm"],
+  ["tutor", "dạy gia sư"],
+  ["research", "bài nghiên cứu"],
+  ["thesis", "luận văn"],
+  ["cross out", "gạch bỏ"],
+  ["join", "tham gia"],
+  ["campus", "khuôn viên trường"],
+  ["excellent", "xuất sắc"],
+  ["guide", "hướng dẫn"],
+  ["knowledge", "kiến thức"],
+  ["absent", "vắng"],
+  ["transcript", "bảng điểm"],
+  ["club", "câu lạc bộ"],
+  ["scholarship", "học bổng"],
+  ["fee", "phí"],
+  ["graduate", "tốt nghiệp"],
+  ["uniform", "đồng phục"],
+  ["calculator", "máy tính bỏ túi"],
+  ["event", "sự kiện"],
+  ["tool", "công cụ"],
+  // Unit 10
+  ["remain", "giữ nguyên"],
+  ["fond of", "quý mến"],
+  ["advice", "lời khuyên"],
+  ["difference", "sự khác biệt"],
+  ["trust", "tin tưởng"],
+  ["stranger", "người lạ"],
+  ["doubt", "nghi ngờ"],
+  ["get along", "hòa đồng"],
+  ["roommate", "bạn cùng phòng"],
+  ["relationship", "mối quan hệ"],
+  ["apart", "cách xa"],
+  ["joy", "niềm vui"],
+  ["loyal", "trung thành, chung thủy"],
+  ["familiar", "quen thuộc"],
+  ["count on", "tin cậy"],
+  ["forever", "mãi mãi"],
+  ["harmony", "sự hòa thuận"],
+  ["reliable", "đáng tin cậy"],
+  ["argue", "tranh cãi, tranh luận"],
+  ["friendship", "tình bạn"],
+  ["mention", "nhắc đến"],
+  ["easy-going", "dễ tính"],
+  ["gossip", "ngồi lê đôi mách"],
+  ["text", "nhắn tin"],
+  ["conversation", "cuộc hội thoại"],
+  ["dear", "đáng mến"],
+  ["reason", "lý do"],
+  ["gift", "món quà"],
+  ["laugh", "cười"],
+  ["comfortable", "thoải mái"],
+  // Unit 11
   ["minute", "phút"],
 
 ];
@@ -277,6 +339,9 @@ function loadVocabulary() {
   if(begin.length == 0) {
     begin = [...list_eng]
   }
+
+  labelFooter()
+
   rd = Math.floor(Math.random() * begin.length);
   document.getElementById("eng").innerHTML = begin[rd][0];
 }
@@ -292,6 +357,10 @@ function changeDisplayNone() {
 }
 
 $(document).ready(function () {
-  $("#sum_vocabulary").html(`Hoàn thành: ${begin.length} / ${list_eng.length}`);
+  labelFooter()
   loadVocabulary();
 });
+
+function labelFooter(){
+  $("#sum_vocabulary").html(`Hoàn thành: ${begin.length} / ${list_eng.length}`);
+}
