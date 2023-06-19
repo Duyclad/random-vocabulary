@@ -246,7 +246,7 @@ const list_eng = [
   ["subject", "môn học"],
   ["chemistry", "hóa học"],
   ["literature", "văn học"],
-  ["hostory", "lịch sử"],
+  ["history", "lịch sử"],
   ["topic", "chủ đề"],
   ["math", "toán học"],
   ["final", "cuối cùng"],
